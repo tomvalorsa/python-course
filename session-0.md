@@ -56,7 +56,9 @@ Hello Smith, Alex.
 
 
 ## Chasing outstanding debts
-On the Yammer page you will find a csv file of project debts (it is not real data). A csv file looks likes an excel file, but it is actually just simple text separated by commas (hence comma separated values - csv). Your task is to find the sum of all the debts listed in the csv file.
+On the [Yammer page] (https://www.yammer.com/api/v1/uploaded_files/61673817/download) you will find a csv file of project debts (it is not real data). Look to the panel on the right of screen for a download link.
+
+A csv file looks likes an excel file, but it is actually just simple text separated by commas (hence comma separated values - csv). Your task is to find the sum of all the debts listed in the csv file.
 Below is a sample of what is looks like:
 
 |Job Number|Debt|
