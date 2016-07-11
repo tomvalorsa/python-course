@@ -15,14 +15,6 @@ Work through the following questions at your own pace. Don't forget to ask quest
 - What is the difference between break and continue?
 - Which Python utility can you use to run a loop a certain amount of times?
 
-## FizzBuzz
-
-Iterate over each number from 1 to 100. For each number (n) in the range, do the following:
-- if n is divisible by 3, print 'Fizz' to the console
-- if n is divisible by 5, print 'Buzz' to the console
-- if n is divisible by 3 *and* 5, print 'FizzBuzz' to the console
-- if none of the above apply, just print n to the console
-
 ## Journey to work
 
 How far do you have to travel to get to work? Ask the user how many kms they travel to work, then give them a suggestion based on their repsonse:
@@ -37,3 +29,12 @@ Here are some example inputs and their expected outputs:
 |6|'You should take the train.'|
 |4|'You should cycle'|
 |2|'Stop being lazy and walk!'|
+
+## FizzBuzz
+
+Iterate over each number from 1 to 100. For each number (n) in the range, do the following:
+- if n is divisible by 3, print 'Fizz' to the console
+- if n is divisible by 5, print 'Buzz' to the console
+- if n is divisible by 3 *and* 5, print 'FizzBuzz' to the console
+- if none of the above apply, just print n to the console
+
