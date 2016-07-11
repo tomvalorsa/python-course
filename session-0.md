@@ -56,10 +56,10 @@ Hello Smith, Alex.
 
 
 ## Chasing outstanding debts
-On the [Yammer page] (https://www.yammer.com/api/v1/uploaded_files/61673817/download) you will find a csv file of project debts (it is not real data). Look to the panel on the right of screen for a download link.
+On the [Yammer page] (https://www.yammer.com/arup.com/#/files/61673817) you will find a csv file of project debts (it is not real data). If the link does not work, you will find the file on our Yammer Page under the "files" tab.
 
-A csv file looks likes an excel file, but it is actually just simple text separated by commas (hence comma separated values - csv). Your task is to find the sum of all the debts listed in the csv file.
-Below is a sample of what is looks like:
+A csv file looks likes an excel file, but it is actually just simple text separated by commas (hence Comma Separated Values - csv). Your task is to find the sum of all the debts listed in the csv file.
+Below is a sample of what it looks like:
 
 |Job Number|Debt|
 |-----|------|
@@ -78,6 +78,6 @@ with open("debts.csv") as csvfile:
   for row in csvData:
     jobNumber = row['Job Number']
     debt = row['Debt']
-    # Replace the code below with your magic
+    # Replace the code below with your magic, the line below only prints out the line
     print(jobNumber, debt)
 ```
