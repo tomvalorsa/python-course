@@ -1,6 +1,6 @@
 # Hacker Edition Problems
 
-The problems below have been built to keep those who have programmed before (or those who are quick learners) challenged in this course. If you are new to programming you may find yourself completely lost when attempting to solve these problems - do not dispair, they are have been designed to be difficult. The right level of difficulty is hard to get right when designing such problems. We have attempted to set the problems so that they are achievable for the keen student who has finished the previous, relevant problem set. If you get stuck, [Stack Overflow] (http://stackoverflow.com/) is you friend. If you get really stuck, come and see one of the tutors (avoid the hesitation to Google the exact question). Good luck!
+The problems below have been built to keep those who have programmed before (or those who are quick learners) challenged in this course. If you are new to programming you may find yourself completely lost when attempting to solve these problems - do not dispair, they are have been designed to be difficult. The right level of difficulty is hard to get right when designing such problems. We have attempted to set the problems so that they are achievable for the keen student who has finished the previous, relevant problem set. If you get stuck, [Stack Overflow] (http://stackoverflow.com/) is your friend. If you get really stuck, come and see one of the tutors (avoid the hesitation to Google the exact question). Good luck!
 
 NOTE: There is often a really obvious, what is known as, brute force method to solve many of these problems. These methods will take too long for your computer to solve. You will have to think outside the box for an efficient method.
 
@@ -35,9 +35,9 @@ Find the largest palindrome made from the product of two 3-digit numbers.
 
 ## Special Pythagorean Triplet
 A Pythagorean triplet is a set of three natural numbers, a < b < c, for which,
-a2 + b2 = c2
+a^2 + b^2 = c^2
 
-For example, 32 + 42 = 9 + 16 = 25 = 52.
+For example, 3^2 + 4^2 = 9 + 16 = 25 = 5^2.
 
 There exists exactly one Pythagorean triplet for which a + b + c = 1000.
 Find the product abc.
