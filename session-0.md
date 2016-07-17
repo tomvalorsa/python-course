@@ -78,6 +78,6 @@ with open("debts.csv") as csvfile:
   for row in csvData:
     jobNumber = row['Job Number']
     debt = row['Debt']
-    # Replace the code below with your magic, the line below only prints out the line
+    # Replace the code below, the statement below only prints each row to the python console
     print(jobNumber, debt)
 ```
