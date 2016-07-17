@@ -37,7 +37,7 @@ my_string = input("Message to the user")
 
 ## Division
 What is 17 divided by 3?
-How many times does 3 divide into 7?
+How many times does 3 divide into 17?
 
 ## Rounding numbers
 Write a script that prompts the user for a floating point number and the number of decimal places to round the number, print the rounded number to the console. Python has a tool for doing this: `round()`.
