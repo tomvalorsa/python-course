@@ -46,3 +46,11 @@ Iterate over each number from 1 to 100. For each number (n) in the range, do the
 - if n is divisible by 3 *and* 5, print 'FizzBuzz' to the console
 - if none of the above apply, just print n to the console
 
+## Double char
+
+Ask the user to input a string. Return this string, with every character (char) repeated twice.
+
+e.g. 'python' should become 'ppyytthhoonn'
+
+Teacher's pet edition: Ask the user for an number (n) as well. Repeat each char in the given string n times.
+
