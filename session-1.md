@@ -30,14 +30,6 @@ Here are some example inputs and their expected outputs:
 |4|'You should cycle'|
 |2|'Stop being lazy and walk!'|
 
-## Sum
-
-Calculate the sum of:
-
-- every number from 1 to 100
-- every **odd** number from 1 to 100
-- every number from 1 to 100 **divisible by 3**
-
 ## FizzBuzz
 
 Iterate over each number from 1 to 100. For each number (n) in the range, do the following:
@@ -54,3 +46,10 @@ e.g. 'python' should become 'ppyytthhoonn'
 
 Teacher's pet edition: Ask the user for an number (n) as well. Repeat each char in the given string n times.
 
+## Sum
+
+Calculate the sum of:
+
+- every number from 1 to 100
+- every **odd** number from 1 to 100
+- every number from 1 to 100 **divisible by 3**
