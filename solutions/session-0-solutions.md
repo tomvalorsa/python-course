@@ -51,8 +51,10 @@ How many times does 3 divide into 17?
 
 *ANS:*
 Welcome to integer arithmetic.
+
 17 divided by 3:
 17/3 = 5.666666666667
+
 3 divides into 17:
 17//3 = 5
 
