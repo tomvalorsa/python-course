@@ -77,7 +77,7 @@ e.g. "python" should become "ppyytthhoonn"
 Teacher's pet edition: Ask the user for an number (n) as well. Repeat each char in the given string n times.
 
 *ANS:*
-For the examples in class we used the **range()** method with **for** loops. But the **for** loop can iterate over any collection of things. In the case of **range()**, the for loop is iterating over a collection of intergers (ints) that the **range()** method builds for us.
+For the examples in class we used the **range()** method with **for** loops. But the **for** loop can iterate over any collection of things. In the case of **range()**, the for loop is iterating over a collection of integers (ints) that the **range()** method builds for us.
 
 For example:
 range(6) = [0,1,2,3,4,5]
