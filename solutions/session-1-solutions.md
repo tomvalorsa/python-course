@@ -1,12 +1,5 @@
 # Session 1 Problems
 
-In session 1 we learned:
-
-1. How to import a module
-2. Flow control and conditionals
-3. How to use loops
-
-Work through the following questions at your own pace. Don't forget to ask questions if you get stuck!
 
 ## A little theory
 
@@ -22,7 +15,9 @@ Work through the following questions at your own pace. Don't forget to ask quest
 'a = 4' assigns '4' to the variable 'a'
 
 *What is an infinite loop?* The computer is stuck in a 'while' or a 'for' that never ends.
+
 *What is the difference between break and continue?* 'break' will break out of a loop completely, where 'continue' will skip whatever remains in the loop body and begins the next iteration.
+
 *Which Python utility can you use to run a loop a certain amount of times?* The 'for' loop is perfect for this.
 
 ## Journey to work
@@ -77,18 +72,22 @@ for n in range(1, 100):
 
 Ask the user to input a string. Return this string, with every character (char) repeated twice.
 
-e.g. 'python' should become 'ppyytthhoonn'
+e.g. "python" should become "ppyytthhoonn"
 
 Teacher's pet edition: Ask the user for an number (n) as well. Repeat each char in the given string n times.
 
 *ANS:*
-For the examples in class we used the 'range()' method with 'for' loops. But the 'for' loop can iterate over any collection of things. In the case of 'range()', the for loop is iterating over a collection of intergers (ints) that the 'range()' method builds for us. For example:
-'range(6) = [0,1,2,3,4,5]'
-So when we use 'for n in range(6)', we are actually looping though each integer in the collection '[0,1,2,3,4,5]'.
+For the examples in class we used the **range()** method with **for** loops. But the **forv loop can iterate over any collection of things. In the case of **range()**, the for loop is iterating over a collection of intergers (ints) that the **range()** method builds for us.
+
+For example:
+range(6) = [0,1,2,3,4,5]
+
+So when we use **for n in range(6)**, we are actually looping though each integer in the collection **[0,1,2,3,4,5]**.
 
 We can also think of a string as a collection of characters:
-'"A Ham" = ["A", " ", "H", "a", "m"]'
-So we can use a 'for' loop to iterate over a collection of characters in a string.
+"A Ham" = ["A", " ", "H", "a", "m"]
+
+So we can use a **for** loop to iterate over a collection of characters in a string.
 
 ```py
 word = input("Enter a word you would like me to double: ")
