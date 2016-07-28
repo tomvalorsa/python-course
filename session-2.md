@@ -5,8 +5,8 @@
 These are thought questions - there are probably several right answers.
 
 - How can using a function make your code shorter?
+- How can using a function make your code easier to change?
 - How can using a function make your code more easily readable?
-- How can using a function make your code less error-prone?
 
 ## Find the maximum of three numbers
 
