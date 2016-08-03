@@ -8,17 +8,14 @@ These are thought questions - there are probably several right answers.
 - How can using a function make your code easier to change?
 - How can using a function make your code more easily readable?
 
-## Find the maximum of three numbers
+## Find the longer of two strings
 
-Create a function called `max3` that takes three numbers and returns the
-largest one. For example,
+Create a function called `longer_string` that takes two strings and returns the
+longer one. For example,
 
 ```python
-max3(1, 5, 3) == 5
-max3(1, -2, 1) == 1
+longer_string("Ove", "Arup") == "Arup"
 ```
-
-No using Python's built-in `max` function!
 
 ## Print out a triangle
 
