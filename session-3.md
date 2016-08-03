@@ -22,16 +22,19 @@ For the following questions assume `L = ["alex", "mia", "john", "laura", "joyce"
 For the following questions assume `D = {"name":"Alex", "age":27, "height":158}`
 
 - How would you reassign the value associated with the key `"name"` to "John"?
-- What would list(D.keys()) look like?
+- How would you add the key-value pair `{"graduate":True}` to the dictionary `D`?
+- What would `list(D.keys())` look like?
 
 
 ## Data analysis
 
 For the following list:
 ```py
+# Copy and paste into your script
 L = [12,356,321,13,6,-23,-5,35,-424,-2425,45,23,642,634]
 ```
 
+- Calculate the length of `L`
 - Calculate the sum of all elements in `L`
 - Find the maxium value
 - Find the minium value
@@ -86,7 +89,7 @@ I would use the `D.items()` method and a loop.
 
 ## Into the wild
 
-Instead of going to work tomorrow, you decide to go on an adventure. You have a number of items that you would like to take. However, you can only carry so much (7kg). Your job is to pack you bag with as many items as you can while ensuring that the weight of the backpack does not exceed 7kg. It is best to repesent the backpack as a dictionary:
+Instead of going to work tomorrow you decide to go on an adventure. You have a number of items that you would like to take. However, you can only carry 7kg. Your job is to pack you bag with as many items as you can while ensuring that the weight of the backpack does not exceed 7kg. It is best to repesent the backpack as a dictionary:
 
 ```
 > print(backpack)
