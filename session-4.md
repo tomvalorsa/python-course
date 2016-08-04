@@ -20,20 +20,17 @@ In session 4 we learned how to read and write data from a file.
 Below is a snippet that will open and close a file, can you write some code that will eveluate the word count of line of text in example.txt
 print it to the screen?
 
-
 ```py
 
 f = open("example.txt", "w")
 f.write("To write or not to write\nthat is the question!\n")
 f.close()
 
-
 f = open("example.txt", "r")
 
 ... your code here
 
-
-file.close()
+f.close()
 
 
 Example Output
@@ -45,11 +42,13 @@ Example Output
 
 ## Tails
 
-You land your dream job at the bureau of meteorology and the weather is your oyster. Your first job is to check the logs of weather stations around your area and make that the data is being recorded correctly. Using your wealth of programming knowledge you devise a plan to write a python program that will read the last n recordings of the logs will do you work for you while you kick back and daydream what an aurora borealis tornado might look like.
+You land your dream job at the bureau of meteorology and the weather is your oyster. Your first job is to check the logs of weather stations around your area and make that the data is being recorded correctly. Using your wealth of programming knowledge you devise a plan to write a python program that will do you work for you. 
+
+The program reads the last n recordings of the logs will do you work for you while you kick back and daydream what an aurora borealis tornado might look like.
 
 Pro tips
  - Save the folder full of weather files from github to your desktop
- - Save you file in a place where you can access these files 'releatively' easily
+ - Save you file in a place where you can access these files 'relatively' easily
 
 ```py
 # Create a list of logs
@@ -57,12 +56,9 @@ logs = ...your code here
 
 for log in logs:
 	f = open(log, "r")
-
 	...your code here. get the last n recrodings from the file. 
 	Think about how would you check if the recordings are likely to be valid?
-
 	f.close()
-
 
 Example Outputs
 
