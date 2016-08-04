@@ -30,7 +30,7 @@ file.close()
 
 file = open("example.txt", "r")
 
----> your code here
+... your code here
 
 
 file.close()
@@ -58,7 +58,8 @@ logs = ...your code here
 for log in logs:
 	file = open(log, "r")
 
-	...your code here. get the last n recrodings from the file. Think about how would you check if the recordings are likely to be valid?
+	...your code here. get the last n recrodings from the file. 
+	Think about how would you check if the recordings are likely to be valid?
 
 	file.close()
 
