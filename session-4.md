@@ -23,12 +23,12 @@ print it to the screen?
 
 ```py
 
-file = open("example.txt", "w")
-file.write("To write or not to write\nthat is the question!\n")
-file.close()
+f = open("example.txt", "w")
+f.write("To write or not to write\nthat is the question!\n")
+f.close()
 
 
-file = open("example.txt", "r")
+f = open("example.txt", "r")
 
 ... your code here
 
@@ -56,12 +56,12 @@ Pro tips
 logs = ...your code here
 
 for log in logs:
-	file = open(log, "r")
+	f = open(log, "r")
 
 	...your code here. get the last n recrodings from the file. 
 	Think about how would you check if the recordings are likely to be valid?
 
-	file.close()
+	f.close()
 
 
 Example Outputs
