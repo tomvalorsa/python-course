@@ -49,7 +49,7 @@ names = ["Alex", "Mia", "John", "Laura", "Joyce"]
 longest_name = "" # initialise with an empty string
 
 for name in names:
-	if len(name) > len(longestName):
+	if len(name) > len(longest_name):
 		longest_name = name
 
 print("The longest name is: " + longest_name)
