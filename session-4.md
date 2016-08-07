@@ -1,9 +1,11 @@
 # Session 4 Problems
 
-In session 4 we learned how to read and write data from a file.
+In session 4 we learnt about the following:
 
-1. splitting strings
-2. iterating over lines
+1. os module
+2. opening/reading/writing files
+3. splitting strings
+4. iterating over lines
 
 ## A little theory
 
@@ -42,27 +44,121 @@ Example Output
 
 ## Tails
 
-You land your dream job at the bureau of meteorology and the weather is your oyster. Your first job is to check the logs of weather stations around your area and make that the data is being recorded correctly. Using your wealth of programming knowledge you devise a plan to write a python program that will do you work for you. 
+You land your dream job at the bureau of meteorology and the weather is your oyster. Your first job is to check the logs of weather stations around your area and make that the data is being recorded correctly. Using your wealth of programming knowledge you devise a plan to write a python program that will do you work for you while you kick back and daydream what an aurora borealis tornado might look like.
 
-The program reads the last n recordings of the logs will do you work for you while you kick back and daydream what an aurora borealis tornado might look like.
+Write a program That:
+
+1. reads the recordings from all logs
+2. performs some form of check to see whether the logging data appears correct
+3. based on the outcome of the check will print to the screen a message
 
 Pro tips
+
  - Save the folder full of weather files from github to your desktop
- - Save you file in a place where you can access these files 'relatively' easily
+ - Save your file in a place where you can access these files 'relatively' easily
+ - dont rush to code, break down into manageable the steps on paper first
+ - ask questions, lots of them
 
 ```py
 # Create a list of logs
+BASE_DIR = # example 'c:\\Users\\guest\\Desktop'
 logs = ...your code here
 
+
 for log in logs:
+	
 	f = open(log, "r")
-	...your code here. get the last n recrodings from the file. 
+	...your code here. get the last n recordings from the file. 
 	Think about how would you check if the recordings are likely to be valid?
+	
 	f.close()
 
 Example Outputs
 
 > Weather Station x recordings appear valid
 > Weather Station y recordings seem fishy... take a better look
+
+```
+
+
+## Personable Greg
+
+Greg has made an executive decision that the Arup Board needs to be more engaged with its younger employees and overly formal communication is only making the board look even more out of touch. He has decided that all employees under the age of 30 should recieve a less formal emails. Furthermore, there should a numerous random greetings so that it appears more personable.
+
+Greg's go to developer is on holiday at the moment and you step in to help her out. You are given the code below which is almost complete. She has left TO DO notes in her code where it needs fixing. Building the code as is will generate a template but its not quite right. 
+
+Pro tips
+
+ - Save the template.html and Employees.csv from github into a folder on your desktop
+ - Copy the code below and save it in a place where you can access the template.html and Employees.csv easily, build the code first to how it works then start to make required changes
+ - Direct your output to a folder where things wont get too messy
+ - Don't rush to code, break down the problem into manageable the steps on paper first
+ - Ask questions, lots of them
+
+```py
+import random
+
+# TO DO:
+# 1. fix write_personal_email() so it greets/signs off properly 
+# 2. read employees file and loop through calling write_personal_email() with details from Employees.csv
+
+
+def write_personal_email(template, destination, first_name, last_name, age):
+
+    hip_greetings = ['yo', 'hola', 'what up', 'whats crackin']
+    hip_sign_offs = ['laters', 'cya', 'hasta luego', 'peace', 'ya boi'] # feel free to add more
+    
+    normal_greeting = 'Dear'
+    normal_signoff = 'Regards'
+    
+    # open template html
+    f = open(template, 'r+')
+
+    # read all the lines in from the template email
+    lines = f.readlines()
+    f.close()
+
+    # intialise a list to append lines to once 'personalised'
+    personalised_message = []
+
+    for line in lines:
+        
+        if '{{FIRST_NAME}}' in line:
+            line = line.replace('{{FIRST_NAME}}', first_name)
+        if '{{LAST_NAME}}' in line:
+            line = line.replace('{{LAST_NAME}}', last_name)
+        
+        # TO DO: add more conditional statements to select random 
+        # greeting and sign off from using random.choice(hip_greetings)
+        # The tags to replace are {{GREETING}} and {{SIGN_OFF}}
+        # remember only use hip greeting if age < 30
+        
+        personalised_message.append(line)
+
+
+    # open a new file to personalised message
+    f_out = open(destination + first_name + last_name + '.html', 'w')
+
+    # loop through personal message and write to personal file
+    for line in personalised_message:
+        f_out.write(line+'\n')
+    
+    f_out.close()
+
+
+write_personal_email('template.html','', 'Joe', 'Blogs', 25) # run like this to test function
+
+
+# TO DO: read employee csv and loop through each line calling 
+
+# f = open('Employees.csv', 'r+')
+
+# read all the lines in from the template email
+# lines = f.readlines()
+
+# for line in lines:
+
+    # TO DO: use line.split function to process data from Employees.csv and then call
+    # write_personal_email(destination, firstname, lastname, age)
 
 ```
