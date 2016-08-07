@@ -61,7 +61,7 @@ Pro tips
 
 ```py
 # Create a list of logs
-BASE_DIR = # example 'c:\\Users\\guest\\Desktop'
+WORKING_DIR = # example 'c:\\Users\\guest\\Desktop'
 logs = ...your code here
 
 
@@ -83,9 +83,9 @@ Example Outputs
 
 ## Personable Greg
 
-Greg has made an executive decision that the Arup Board needs to be more engaged with its younger employees and overly formal communication is only making the board look even more out of touch. He has decided that all employees under the age of 30 should recieve a less formal emails. Furthermore, there should a numerous random greetings so that it appears more personable.
+Greg has made an executive decision that the Arup Board needs to be more engaged with its younger employees and overly formal communication is only making the board look even more out of touch. He has decided that all employees under the age of 30 should recieve a less formal emails. Furthermore, there should be numerous random greetings so that the emails appear more personable.
 
-Greg's go to developer is on holiday at the moment and you step in to help her out. You are given the code below which is almost complete. She has left TO DO notes in her code where it needs fixing. Building the code as is will generate a template but its not quite right. 
+Greg's go to developer is on holiday at the moment and you step in to help her out. You are given the code below which is almost complete. She has done a good job and left TO DO notes in her code where it needs fixing. Building the code as is will generate a template but its not quite finished yet. 
 
 Pro tips
 
