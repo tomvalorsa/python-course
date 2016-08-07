@@ -36,17 +36,17 @@ Write a script that prompts the user for a floating point number and the number 
 
 Sample input/output:
 ```
-> Enter a floating point number: 2.0453687
-> How many decimal places would you like: 3
-> The rounded number is: 2.045
+>>> Enter a floating point number: 2.0453687
+>>> How many decimal places would you like: 3
+>>> The rounded number is: 2.045
 ```
 
 ## Greetings
 Write a script that prompts the user for their full name, then print a message to the console. A sample is shown below (Google "python string split" if you get stuck).
 Sample input/output:
 ```
-> What is your full name: Alex Smith
-> Hello Smith, Alex
+>>> What is your full name: Alex Smith
+>>> Hello Smith, Alex
 ```
 
 ## Chasing outstanding debts
@@ -70,7 +70,7 @@ import csv
 with open("debts.csv") as csvfile:
   csvData = csv.DictReader(csvfile)
   for row in csvData:
-    jobNumber = row['Job Number']
+    job_number = row['Job Number']
     debt = row['Debt']
-    print(jobNumber, debt)
+    print(job_number, debt)
 ```
