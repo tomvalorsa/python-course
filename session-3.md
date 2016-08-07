@@ -1,11 +1,13 @@
 # Session 3 Problems
 
-In session 3 we learned convenient ways to store your data.
+In session 3 we learned convenient ways to store your data using:
 
 1. Lists
 2. Dictionaries
 
 ## A little theory
+
+Try to answer the questions then use the python console to check. 
 
 For the following questions assume `L = [0,1,2,3,4]`
 
@@ -21,7 +23,7 @@ For the following questions assume `L = ["alex", "mia", "john", "laura", "joyce"
 
 For the following questions assume `D = {"name":"Alex", "age":27, "height":158}`
 
-- How would you reassign the value associated with the key `"name"` to "John"?
+- How would you change the value associated with the key `"name"` from "Alex" to "John"?
 - How would you add the key-value pair `{"graduate":True}` to the dictionary `D`?
 - What would `list(D.keys())` look like?
 
@@ -40,34 +42,51 @@ L = [12,356,321,13,6,-23,-5,35,-424,-2425,45,23,642,634]
 - Find the minium value
 - Calculate the mean value (mean = sum of L divided by the number of elements in L)
 
+*Hint:* The `for` loop is very useful when dealing with lists. Below is an example of using a `for` loop to determine the longest name in a list of names.
 
+```py
+names = ["Alex", "Mia", "John", "Laura", "Joyce"]
+longestName = "" # initialise with an empty string
+
+for name in names:
+	if len(name) > len(longestName):
+		longestName = name
+
+print("The longest name is: " + longestName)
+# The longest name is laura
+```
 
 ## Square map
 
-Write a function that takes in a list of numbers (ints or floats) and returns a list of the same length where each element is squared.
+Write a function called `squareMap` that takes in a list of numbers (integers or floats) and returns a list of the same length only each element has been squared.
 
 Sample input/output:
 ```
-> numbers = [1,2,3,5]
-> squareMap(numbers)
+>>> numbers = [1,2,3,5]
+>>> squareMap(numbers)
 [1, 4, 9, 25]
 ```
 
 ## Append Check
 
-Write a function that adds and element to a list provided that element is not already in the list. Remember that lists are passed by reference!
+Write a function called `myAppend` that adds an element to a list provided that element is not already in the list. Remember that lists are passed by reference! The example below shows that the `myAppend` function does not actually return anything, it "mutates" (edits) the `animals` list.
 
+Sample input/output:
 ```
-> animals = ["cat", "dog", "elephant", "pig"]
-> myAppend(animals, "zebra")
-> print(animals)
+>>> animals = ["cat", "dog", "elephant", "pig"]
+>>> myAppend(animals, "dog")
+>>> print(animals)
+["cat", "dog", "elephant", "pig"]
+>>> myAppend(animals, "zebra")
+>>> print(animals)
 ["cat", "dog", "elephant", "pig", "zebra"]
 ```
 
+*NOTE:* Try not to mutate lists with functions in the future. We are just trying to show you how lists work with functions.
 
 ## Pretty Print
 
-The output of the inbuilt python `print` function doesn't look very good when printing a dictionary. Let's right a function to make the output look nicer.
+The output of the inbuilt python `print` function doesn't look very good when printing a dictionary. Let's right a function called `pprint` to make the output look nicer.
 
 ```py
 def pprint(aDict):
@@ -76,15 +95,16 @@ def pprint(aDict):
 
 Sample input/output:
 ```
-> D = {"name":"Alex", "age":27, "height":158}
-> pprint(D)
+>>> D = {"name":"Alex", "age":27, "height":158}
+>>> pprint(D)
 {
 	name:	Alex
 	age:	27
 	height:	158
 }
 ```
-I would use the `D.items()` method and a loop.
+
+*HINT:* Use the `D.items()` method and a for loop.
 
 
 ## Into the wild
