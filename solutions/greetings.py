@@ -1,0 +1,5 @@
+name = input('What is your name? ')
+print('hello, ' + name)
+smallTalk = input('How was your weekend?' )
+print('oh nice... **smiles & walks off ')
+input()

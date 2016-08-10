@@ -54,14 +54,14 @@ Write a program That:
 
 Pro tips
 
- - Save the folder full of weather files from github to your desktop
- - Save your file in a place where you can access these files 'relatively' easily
+ - Save the folder Session-4 Tails which is full of weather files from github to your desktop 
+ - Save your python program in a place where you can access these files 'relatively' easily
  - dont rush to code, break down into manageable the steps on paper first
  - ask questions, lots of them
 
 ```py
 # Create a list of logs
-WORKING_DIR = # example 'c:\\Users\\guest\\Desktop'
+WORKING_DIR = # example 'c:\\Users\\guest\\Desktop\\Session-4 Tails\\'
 logs = ...your code here
 
 
@@ -89,7 +89,7 @@ Greg's go to developer is on holiday at the moment and you step in to help her o
 
 Pro tips
 
- - Save the template.html and Employees.csv from github into a folder on your desktop
+ - Save the template.html and Employees.csv from github resources folder named Session-4 Personable Greg into a folder on your desktop
  - Copy the code below and save it in a place where you can access the template.html and Employees.csv easily, build the code first to how it works then start to make required changes
  - Direct your output to a folder where things wont get too messy
  - Don't rush to code, break down the problem into manageable the steps on paper first
