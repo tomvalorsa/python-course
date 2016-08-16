@@ -39,6 +39,32 @@ __Order of Operation__
 ```
 
 ## Session 1 - Basics Part A
+__If Statements__
+'''py
+# if statment
+condition = True # condition is an expression that evaluates to True or False
+if (condition):
+	# execute the body of code. Indentation is important!
+
+# if else statment
+if (condition):
+	# execute this body of code
+else:
+	# execute this body of code
+
+# if elif else statment
+if (condition1):
+	# execute this body of code
+elif (condition2):
+	# execute this body of code
+elif (condition3):
+	# execute this body of code
+else:
+	# execute this body of code
+
+# you can have as many elif's as you like
+'''
+
 __For loops__
 ```py
 for  i in range(10): # loops over the set -> 0,1,2,...,9
@@ -66,9 +92,57 @@ def add(a, b):
 ```
 
 ## Session 3 - Data Structures
-```py
 
+__Lists__
+```py
+# python list - a variable to store stuff
+names = ["Jess","Tom","Laura","Will"]
+
+# list splicing
+names[0] # "Jess"
+names[1] # "Tom"
+names[-2] # "Laura"
+names[start:stop:step] # grab multiple elements from list (includes start, excludes stop)
+names[1:3:1] # ["Tom", "Laura"]
+
+# how long is the list
+len(names) # 4
+# adding to list
+names.append("Jason") # add "Jason" to end
+names.insert(2, "John") # insert "John" at index 2
+names.extend(["Alex","Faye","Mia"]) # append "Alex", "Faye" and "Mia" to the list
+# remove from the list
+names.pop([i]) # removes "Mia" and returns
+names.remove("Tom") # removes first "Tom" found
+
+# some useful things you can do with lists
+"Sam" in names # False
+"Sam" not in names # True
+
+# loop through each element in an array
+for name in names:
+	print(name)
 ```
+
+__Dictionaries__
+'''py
+person = {"name":"Alex", "age":27, "height":158, 42:"The ultimate question"}
+
+person["name"] # "Alex"
+person["age"] # 27
+
+len(person) # 4
+person["graduate"] = True # adds another key-value pair to the dictionary
+person.pop(42) # returns "The ultimate Question" and deletes the key-value pair from the dictionary
+
+# looping through dictionary
+person.values() # ["Alex", 27, 158, True]
+person.keys() # ["name", "age", "height", "graduate"]
+person.items() # [("name", "Alex"), ("age", 27), ("height", 158), ("graduate", True)]
+
+for k, v in person.items():
+	print("Key: "+ str(k)+ "\tValue: "+ str(v)
+'''
 
 ## Session 4 - Reading/Writing Files
 
@@ -109,3 +183,54 @@ f = open('file.txt', 'w')    # read mode
 f.write("To write or not to write\nthat is the question!\n")
 f.close()
 ```
+## Session SciPy
+
+__Numpy__
+Using vectors
+'''py
+import numpy as np
+a = np.array([2,3,4,5,6,7,8])
+b = 2*a+0.5
+# element wise multiplication
+a*b
+# dot product
+a.dot(b)
+'''
+Using matrices
+'''py
+a = np.arange(5)
+b = np.arange(10).reshape(10,1)
+# element wise manipulation
+b*a
+'''
+
+__Matplotlib__
+Use numpy to help plot scientific functions.
+'''py
+# damped oscillators
+from math import pi
+
+x = np.linspace(0, 10*pi, 300)
+y1 = np.exp(-0.2*x)*np.sin(x)
+y2 = np.exp(-0.8*x)*np.sin(x)
+
+from matplotlib import pyplot as plt
+
+plt.plot(x, y1, 'r', label = "low damping")
+plt.plot(x, y2, 'b', label = "high damping")
+plt.legend(loc="upper right")
+plt.axis([0, 10*pi, -1, 1])
+plt.grid()
+plt.show()
+'''
+
+Plotting histograms
+'''py
+mu = 2
+sigma = 0.5
+no_points = 10000
+v = np.random.normal(mu, sigma, no_points)
+# Plot a normalized histogram with 50 bins
+plt.hist(v, bins=50, normed=1)
+plt.show()
+'''
