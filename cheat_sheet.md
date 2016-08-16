@@ -23,19 +23,16 @@ __Converting Types__
 Remember to switch between types to perform operations
 
 ```py
->>>str(3)
-'3'
->>>int('2')
-2
->>>float('3.2')
-3.2
+str(3) # '3'
+int('2') # 2
+float('3.2') # 3.2
 ```
 
 __Order of Operation__
 ```py
->>> (3+2)*5     # remember BOMDAS?
-25
-
+(3+2)*5 # 25
+# remember BOMDAS?
+# Brackets Over Multiplication, Division, Addition and Subtraction
 ```
 
 ## Session 1 - Basics Part A
@@ -148,19 +145,14 @@ for k, v in person.items():
 
 __Splitting a string__
 ```py
->>>split_string = 'hello i am a string'.split() # returns a list split by whitespace
->>>split_string
-['hello', 'i', 'am', 'a', 'string']
+split_string = 'hello i am a string'.split() # returns a list split by whitespace
+split_string # ['hello', 'i', 'am', 'a', 'string']
 
+csv_string = '1,2,456,789,1566'.split(',') # returns a list split by ,
+csv_string # ['1','2','456','789','1566'] note that these are still strings not ints
 
->>>csv_string = '1,2,456,789,1566'.split(',') # returns a list split by ,
->>>csv_string
-['1','2','456','789','1566'] # note that these are still strings not ints
-# you can use map and list to convert the  list
->>>csv_ints = map(int,'1,2,3,4,5'.split(','))
->>>csv_ints
-[1,2,456,789,1566]
-
+# you can use map and list to convert the list
+csv_ints = list(map(int,'1,2,3,4,5'.split(','))) # [1,2,456,789,1566]
 ```
 __Opening a file__
 ```py
