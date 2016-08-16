@@ -1,4 +1,4 @@
-# Session 0 Solutions
+# Session 0
 
 ## A little theory
 Which of the following are operators, and which are values?
