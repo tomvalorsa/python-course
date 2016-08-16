@@ -7,6 +7,8 @@ In session 4 we learnt about the following:
 3. splitting strings
 4. iterating over lines
 
+[Cheat Sheet Here!](https://github.com/tomvalorsa/python-course/blob/master/cheat_sheet.md#session-4---readingwriting-files)
+
 ## A little theory
 
  - What is a relative path relative to?
