@@ -17,31 +17,6 @@ In session 4 we learnt about the following:
  - What happens if an existing file is opened in write mode?
  - What is the difference between the read() and readlines() methods?
 
-## Chasing outstanding debts
-In the resources folder on this GitHub page you will find a csv file of project debts - *debts.csv* (it is not real data). If the link does not work, you will find the file on our Yammer Page under the "files" tab.
-
-A csv file looks likes an excel file, but it is actually just simple text separated by commas (hence Comma Separated Values - csv). Your task is to find the sum of all the debts listed in the csv file.
-Below is a sample of what it looks like:
-
-|Job Number|Debt|
-|-----|------|
-|243156|1235.63|
-|236412|2356.21|
-|315224|23.01|
-
-What would the instructions look like to do this by hand? Surprisingly, the instructions for the computer are quite similar.
-
-Below is some python code that you can copy and paste into your script to read the csv line by line.
-
-```py
-import csv
-with open("debts.csv") as csvfile:
-  csvData = csv.DictReader(csvfile)
-  for row in csvData:
-    job_number = row['Job Number']
-    debt = row['Debt']
-    print(job_number, debt)
-```
 
 
 ## Evaluating lines
@@ -188,4 +163,29 @@ write_personal_email('template.html','', 'Joe', 'Blogs', 25) # run like this to 
     # TO DO: use line.split function to process data from Employees.csv and then call
     # write_personal_email(destination, firstname, lastname, age)
 
+```
+## Chasing outstanding debts
+In the resources folder on this GitHub page you will find a csv file of project debts - *debts.csv* (it is not real data). If the link does not work, you will find the file on our Yammer Page under the "files" tab.
+
+A csv file looks likes an excel file, but it is actually just simple text separated by commas (hence Comma Separated Values - csv). Your task is to find the sum of all the debts listed in the csv file.
+Below is a sample of what it looks like:
+
+|Job Number|Debt|
+|-----|------|
+|243156|1235.63|
+|236412|2356.21|
+|315224|23.01|
+
+What would the instructions look like to do this by hand? Surprisingly, the instructions for the computer are quite similar.
+
+Below is some python code that you can copy and paste into your script to read the csv line by line. This time you will be using the 'with open() as ...:' statement instead of just open. It will behave in a similar manner. 
+
+```py
+import csv
+with open("debts.csv") as csvfile:
+  csvData = csv.DictReader(csvfile)
+  for row in csvData:
+    job_number = row['Job Number']
+    debt = row['Debt']
+    print(job_number, debt)
 ```
