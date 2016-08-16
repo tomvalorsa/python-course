@@ -41,18 +41,18 @@ __Order of Operation__
 ## Session 1 - Basics Part A
 __If Statements__
 ```py
-# if statment
+# if statement
 condition = True # condition is an expression that evaluates to True or False
 if (condition):
 	# execute the body of code. Indentation is important!
 
-# if else statment
+# if else statement
 if (condition):
 	# execute this body of code
 else:
 	# execute this body of code
 
-# if elif else statment
+# if elif else statement
 if (condition1):
 	# execute this body of code
 elif (condition2):
@@ -67,7 +67,7 @@ else:
 
 __For loops__
 ```py
-for  i in range(10): # loops over the set -> 0,1,2,...,9
+for i in range(10): # loops over the set -> 0,1,2,...,9
 	print(i)
 
 ```
@@ -102,7 +102,7 @@ names = ["Jess","Tom","Laura","Will"]
 names[0] # "Jess"
 names[1] # "Tom"
 names[-2] # "Laura"
-names[start:stop:step] # grab multiple elements from list (includes start, excludes stop)
+# names[start:stop:step] grabs multiple elements from list (includes start, excludes stop)
 names[1:3:1] # ["Tom", "Laura"]
 
 # how long is the list
@@ -112,7 +112,7 @@ names.append("Jason") # add "Jason" to end
 names.insert(2, "John") # insert "John" at index 2
 names.extend(["Alex","Faye","Mia"]) # append "Alex", "Faye" and "Mia" to the list
 # remove from the list
-names.pop([i]) # removes "Mia" and returns
+names.pop() # removes "Mia" and returns
 names.remove("Tom") # removes first "Tom" found
 
 # some useful things you can do with lists
