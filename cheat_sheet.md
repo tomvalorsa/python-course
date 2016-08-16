@@ -34,7 +34,10 @@ __Order of Operation__
 # remember BOMDAS?
 # Brackets Over Multiplication, Division, Addition and Subtraction
 ```
-
+__Rounding Numbers__
+```py
+round(3.4564,2) # will round the number to 2 decimal places
+```
 ## Session 1 - Basics Part A
 __If Statements__
 ```py
