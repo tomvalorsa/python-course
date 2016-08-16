@@ -40,7 +40,7 @@ __Order of Operation__
 
 ## Session 1 - Basics Part A
 __If Statements__
-'''py
+```py
 # if statment
 condition = True # condition is an expression that evaluates to True or False
 if (condition):
@@ -63,7 +63,7 @@ else:
 	# execute this body of code
 
 # you can have as many elif's as you like
-'''
+```
 
 __For loops__
 ```py
@@ -125,7 +125,7 @@ for name in names:
 ```
 
 __Dictionaries__
-'''py
+```py
 person = {"name":"Alex", "age":27, "height":158, 42:"The ultimate question"}
 
 person["name"] # "Alex"
@@ -142,7 +142,7 @@ person.items() # [("name", "Alex"), ("age", 27), ("height", 158), ("graduate", T
 
 for k, v in person.items():
 	print("Key: "+ str(k)+ "\tValue: "+ str(v)
-'''
+```
 
 ## Session 4 - Reading/Writing Files
 
@@ -187,7 +187,7 @@ f.close()
 
 __Numpy__
 Using vectors
-'''py
+```py
 import numpy as np
 a = np.array([2,3,4,5,6,7,8])
 b = 2*a+0.5
@@ -195,18 +195,18 @@ b = 2*a+0.5
 a*b
 # dot product
 a.dot(b)
-'''
+```
 Using matrices
-'''py
+```py
 a = np.arange(5)
 b = np.arange(10).reshape(10,1)
 # element wise manipulation
 b*a
-'''
+```
 
 __Matplotlib__
 Use numpy to help plot scientific functions.
-'''py
+```py
 # damped oscillators
 from math import pi
 
@@ -222,10 +222,10 @@ plt.legend(loc="upper right")
 plt.axis([0, 10*pi, -1, 1])
 plt.grid()
 plt.show()
-'''
+```
 
 Plotting histograms
-'''py
+```py
 mu = 2
 sigma = 0.5
 no_points = 10000
@@ -233,4 +233,4 @@ v = np.random.normal(mu, sigma, no_points)
 # Plot a normalized histogram with 50 bins
 plt.hist(v, bins=50, normed=1)
 plt.show()
-'''
+```
