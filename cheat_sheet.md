@@ -112,7 +112,13 @@ __Defining a function__
 def add(a, b):
 	return a+b
 ```
+__length of a string or collection__
 
+```py
+>>>s = 'hello'
+>>>len(s)
+5
+```
 ## Session 3 - Data Structures
 
 __Lists__
