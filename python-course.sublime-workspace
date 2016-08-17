@@ -1,0 +1,248 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"rain",
+				"rainFall"
+			],
+			[
+				"read",
+				"readWeatherFile"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "session-5.md",
+			"settings":
+			{
+				"buffer_size": 1060,
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/D/SoftwareProjects/PythonCourse/python-course"
+	],
+	"file_history":
+	[
+		"/D/SoftwareProjects/PythonCourse/sessionNotes/Session3/session3.txt",
+		"/D/SoftwareProjects/PythonCourse/sessionNotes/Session1/Session1.txt",
+		"/D/SoftwareProjects/PythonCourse/sessionNotes/Session5/session5.txt",
+		"/C/Users/alex-l.smith/AppData/Roaming/Sublime Text 3/Packages/Default/Preferences.sublime-settings",
+		"/D/SoftwareProjects/PythonCourse/sessionNotes/SessionSciPy/sessionSciPy.txt",
+		"/D/SoftwareProjects/PythonCourse/sessionProblems/session-3.md",
+		"/D/SoftwareProjects/PythonCourse/sessionProblems/session-0.md",
+		"/D/SoftwareProjects/PythonCourse/sessionProblems/session-1.md",
+		"/D/SoftwareProjects/PythonCourse/sessionProblems/session-2.md",
+		"/D/SoftwareProjects/PythonCourse/sessionProblems/.gitignore",
+		"/C/Users/alex-l.smith/AppData/Roaming/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/D/SoftwareProjects/PythonCourse/sessionProblems/solutions/session-0-solutions.md",
+		"/D/SoftwareProjects/PythonCourse/sessionProblems/solutions/session-1-solutions.md",
+		"/D/SoftwareProjects/PythonCourse/sessionProblems/hacker-edition.md",
+		"/C/Users/alex-l.smith/Desktop/debts.csv",
+		"/C/Users/alex-l.smith/SoftwareRelated/PythonCourse/sessionProblems/session-0.md",
+		"/C/Users/alex-l.smith/SoftwareRelated/PythonCourse/sessionProblems/solutions/session-0-solutions.md",
+		"/C/Users/alex-l.smith/SoftwareRelated/PythonCourse/sessionProblems/.gitignore",
+		"/C/Users/alex-l.smith/Documents/TempPython/WeattherAnalysis/SydneyAirportWeatherDataAnalysis.py",
+		"/C/Users/alex-l.smith/SoftwareRelated/PythonCourse/sessionNotes/Session1.md",
+		"/C/Users/alex-l.smith/SoftwareRelated/PythonCourse/sessionNotes/Session1_if1.py",
+		"/C/Users/alex-l.smith/SoftwareRelated/PythonCourse/sessionNotes/Session1_while1.py",
+		"/C/Users/alex-l.smith/SoftwareRelated/PythonCourse/sessionNotes/Session1_raining.py",
+		"/C/Users/alex-l.smith/Documents/TempPython/WeattherAnalysis/HM01X_Data_066037_999999999256046.txt",
+		"/C/Users/alex-l.smith/SoftwareRelated/PythonCourse/sessionNotes/Session1_booleanTables.md",
+		"/C/Users/alex-l.smith/SoftwareRelated/PythonCourse/sessionNotes/Session1_while2.py",
+		"/C/Users/alex-l.smith/Documents/TempPython/WeattherAnalysis/booleanTables.md",
+		"/C/Users/alex-l.smith/Documents/TempPython/WeattherAnalysis/BOMDataReader.py",
+		"/C/Anaconda3/Lib/site-packages/windrose/windrose.py",
+		"/C/Users/alex-l.smith/Documents/TempPython/OCFAirVel.py",
+		"/J/239000/239304-00 Site 1B Residential/Work/Internal/Design/Environmental/CFD Files/Stage 3/EmpiricalApproach/OCF/OCFAirVel.py"
+	],
+	"find":
+	{
+		"height": 36.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"open",
+			"_info",
+			"label",
+			"Velocity,Pressure"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "session-5.md",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1060,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1059,
+								1059
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Markdown/Markdown.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 31.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "python-course.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 209.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}
