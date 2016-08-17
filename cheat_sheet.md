@@ -39,6 +39,28 @@ __Rounding Numbers__
 round(3.4564,2) # will round the number to 2 decimal places
 ```
 ## Session 1 - Basics Part A
+__Bools and Comparison operators
+```py
+# comparison operators
+== # equal to
+!= # not equal to
+< # less than
+> # greater than
+<= # less than or equal to
+>= # greater than or equal to
+# expressions that evaluate to a boolean value
+42 <= 42 # True
+'42' == 42 # False
+my_age = 27 # assign 27 to my_age
+my_age == 27 # True
+# boolean operators
+True and False # False
+True or False # True
+myAge > 25 or myAge < 20 # True
+myAge > 25 and myAge < 20 # False
+not True # False
+not False # True
+```
 __If Statements__
 ```py
 # if statement
