@@ -174,6 +174,27 @@ for k, v in person.items():
 
 ## Session 4 - Reading/Writing Files
 
+Navigation of directories in python can be done using the following commands
+
+```py
+import os
+
+# working director
+os.getcwd() # will return a path to your current working directory
+
+# check if file exists
+os.path.exists(... your path)
+
+#Joining Paths
+path = '.\\Desktop\\'
+file = 'example.txt'
+full_path = os.path.join(path, file)
+
+#changing directory
+os.chdir()
+
+```
+
 __Splitting a string__
 ```py
 split_string = 'hello i am a string'.split() # returns a list split by whitespace
@@ -206,6 +227,8 @@ f = open('file.txt', 'w')    # read mode
 f.write("To write or not to write\nthat is the question!\n")
 f.close()
 ```
+
+
 ## Session SciPy
 
 __Numpy__
