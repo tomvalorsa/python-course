@@ -14,7 +14,7 @@ Create a function called `longer_string` that takes two strings and returns the
 longer one. For example,
 
 ```python
-longer_string("Ove", "Arup") == "Arup"
+longer_string("Ove", "Arup") # returns "Arup"
 ```
 
 ## Print out a triangle
