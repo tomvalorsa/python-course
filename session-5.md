@@ -100,15 +100,16 @@ In the [resources](https://github.com/tomvalorsa/python-course/tree/master/resou
 
 We would like to find out a few things from the speech:
 
-1. What were the 20 most frequently used words?
-2. How could you make these results more interesting/relevant? (hint: remove words with < 3 letters)
+1. What words occur more than 10 times?
+2. What were the 20 most frequently used words?
+3. How could you make these results more interesting/relevant? (hint: remove words with < 3 letters)
 
-A simple approach we would recommend is to use a dictionary to store words and their corresponding frequencies.
+A simple approach (for parts 2 and 3) we would recommend is to use a dictionary to store words and their corresponding frequencies.
 You will need to extract each word from the speech individually, remembering that 'Tax' is not the same as 'tax' (hint: or 'tax,').
 
 How would you extract each word from the following sentence: "Tax, tax and more tax."
 
-A generic code snippet that prints the first ten key-value pairs from a dictionary, from largest to smallest:
+A generic code snippet that prints the key-value pairs from a dictionary:
 
 ```
 >>> animal_frequency={'frog':5, 'antelope':2, 'toucan':3}
