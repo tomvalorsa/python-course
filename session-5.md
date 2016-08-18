@@ -96,7 +96,7 @@ Attendance consistency
 ## Common Words
 
 Have you ever listened to a politician give a speech?
-In the [resources](https://github.com/tomvalorsa/python-course/tree/master/resources) folder there is a .txt copy of the 2016 budget speech delivered by Honourable Scott Morrison MP, Treasurer of the Commonwealth of Australia - download this file and save it in your working directory.
+In the [resources](https://github.com/tomvalorsa/python-course/tree/master/resources) folder there is a .txt copy of the 2016 budget speech delivered by Honourable Scott Morrison MP, Treasurer of the Commonwealth of Australia - download this file and save it in your working directory. For the more adventurous types, there is also a recent speech by Donald Trump.
 
 We would like to find out a few things from the speech:
 
