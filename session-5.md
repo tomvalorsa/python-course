@@ -76,7 +76,7 @@ A generic code snippet that prints the first ten key-value pairs from a dictiona
 ```
 >>> dict={'a':1, 'b':2, 'c':3}
 >>> for item in sorted(dict.items(), key=lambda x:x[1], reverse=True)[:10]:
-	print(item[0], item[1])
+		print(item[0], item[1])
 c 3
 b 2
 a 1
