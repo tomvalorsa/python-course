@@ -57,6 +57,32 @@ blackmandarin685
 
 ## Common Words
 
+Have you ever listened to a politician give a speech?
+In the [resources](https://github.com/tomvalorsa/python-course/tree/master/resources) there is a .txt copy of the 2016 budget speech delivered by Honourable Scott Morrison MP, Treasurer of the Commonwealth of Australia - download this file and save it in your working directory.
+
+We would like to find out a few things from the speech:
+
+1. What were the most frequently used words?
+2. What were the least used words?
+3. How could you make these results more interesting/relevant? (hint: remove words with < 2 letters)
+
+A sample output is shown below:
+
+```
+Word: 'the', frequency: 198 
+Word: 'and', frequency: 164
+Word: 'will', frequency: 80
+Word: 'for', frequency: 69
+Word: 'tax', frequency: 65
+Word: 'our', frequency: 53
+Word: 'this', frequency: 46
+Word: 'are', frequency: 38
+Word: 'that', frequency: 37
+Word: 'their', frequency: 36
+Word: 'jobs', frequency: 36
+Word: 'new', frequency: 30
+```
+
 
 ## Session Attendance
 
