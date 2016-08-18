@@ -58,13 +58,29 @@ blackmandarin685
 ## Common Words
 
 Have you ever listened to a politician give a speech?
-In the [resources](https://github.com/tomvalorsa/python-course/tree/master/resources) there is a .txt copy of the 2016 budget speech delivered by Honourable Scott Morrison MP, Treasurer of the Commonwealth of Australia - download this file and save it in your working directory.
+In the [resources](https://github.com/tomvalorsa/python-course/tree/master/resources) folder there is a .txt copy of the 2016 budget speech delivered by Honourable Scott Morrison MP, Treasurer of the Commonwealth of Australia - download this file and save it in your working directory.
 
 We would like to find out a few things from the speech:
 
-1. What were the most frequently used words?
-2. What were the least used words?
+1. What were the 20 most frequently used words?
+2. What were the 20 least used words?
 3. How could you make these results more interesting/relevant? (hint: remove words with < 2 letters)
+
+A simple approach we would recommend is to use a dictionary to store words and their corresponding frequencies.
+You will need to extract each word from the speech individually, remembering that 'Tax' is not the same as 'tax' (hint: or 'tax,').
+
+How would you extract each word from the following sentence: "Tax, tax and more tax."
+
+A generic code snippet that prints the first ten key-value pairs from a dictionary, from largest to smallest:
+
+```
+>>> dict={'a':1, 'b':2, 'c':3}
+>>> for item in sorted(dict.items(), key=lambda x:x[1], reverse=True)[:10]:
+	print(item[0], item[1])
+c 3
+b 2
+a 1
+```
 
 A sample output is shown below:
 
@@ -82,7 +98,6 @@ Word: 'their', frequency: 36
 Word: 'jobs', frequency: 36
 Word: 'new', frequency: 30
 ```
-
 
 ## Session Attendance
 
