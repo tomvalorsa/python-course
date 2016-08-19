@@ -23,10 +23,10 @@ You have offered to use your python skills to write a program that will count do
 
 It is important that the countdown announce each stage of the launch as it occurs:
 
-16 seconds: Launch pad sound suppression system activated
-10 seconds: Main engine hydrogen burnoff system activated
-7 seconds: Main engine start
-1 seconds: Solid booster ignition
+16 seconds: Launch pad sound suppression system activated  
+10 seconds: Main engine hydrogen burnoff system activated  
+7 seconds: Main engine start  
+1 seconds: Solid booster ignition  
 0 seconds: Exact time (HH:MM:SS DD/MM/YYYY) of liftoff
 
 A sample output is shown below:
