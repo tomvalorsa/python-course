@@ -228,6 +228,46 @@ f.write("To write or not to write\nthat is the question!\n")
 f.close()
 ```
 
+## Session Excel
+
+__Keeping Time__
+Timestamps
+```py
+>>> import time
+>>> before = time.time()
+>>> after = time.time()
+>>> difference = after - before
+>>> difference
+5.070942401885986
+```
+
+Datetime
+```py
+>>> datetime.datetime.now()
+datetime.datetime(2016, 8, 22, 8, 44, 41, 340622)
+```
+Formatting Datetime
+```py
+>>> import datetime
+>>> date_today = datetime.datetime.now()
+>>> date_today
+datetime.datetime(2016, 8, 22, 8, 46, 4, 937283)
+>>> date_today.strftime('%d/%m/%Y')
+'22/08/2016'
+>>> date_today.strftime('%H:%M:%S')
+'08:46:04'
+>>> date_today.strftime('The date is %d/%m/%Y, the time is: %H:%M:%S')
+'The date is 22/08/2016, the time is: 08:46:04'
+```
+
+Timedelta
+```py
+>>> import datetime
+>>> time_now = datetime.datetime.now()
+>>> time_later = time_now + datetime.timedelta(days=10, hours=5, minutes=24, seconds=12)
+>>> time_later.strftime('%H:%M:%S %d/%m/%Y')
+'14:16:43 01/09/2016'
+```
 
 ## Session SciPy
 
