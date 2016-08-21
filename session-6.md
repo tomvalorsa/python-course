@@ -40,13 +40,26 @@ datetime.datetime(2016, 8, 22, 8, 46, 4, 937283)
 >>> date_today.strftime('The date is %d/%m/%Y, the time is: %H:%M:%S')
 'The date is 22/08/2016, the time is: 08:46:04'
 ```
-
+We can advance or rewind a particular datetime by using ```datetime.timedelta()```.
 ```
 >>> import datetime
 >>> time_now = datetime.datetime.now()
 >>> time_later = time_now + datetime.timedelta(days=10, hours=5, minutes=24, seconds=12)
 >>> time_later.strftime('%H:%M:%S %d/%m/%Y')
 '14:16:43 01/09/2016'
+```
+
+When we are running a program (for example a ```for``` loop), we can delay the program using the ```time.sleep()``` function:
+
+```
+>>> import time
+>>> def wait_ten_seconds():
+	    print('Waiting for 10 seconds')
+	    time.sleep(10)
+	    print('Finished!')
+>>> wait_ten_seconds()
+Waiting for 10 seconds
+Finished!
 ```
 
 ## Hints and best practice
