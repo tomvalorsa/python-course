@@ -14,13 +14,12 @@ Recall from session 4:
 
 The Unix time variable (timestamp) is based on the total seconds elapsed from the Unix Epoch (12 AM 1st January 1970 UTC).
 
-
 ```
 >>> import time
 >>> time.time()
 1471568701.1974244
 ```
-
+When we call ```time.time()``` we can assign it to a variable, eg ```time_now = time.time()``` and perform operations as usual - remember this operates in seconds.
 ```
 >>> import time
 >>> before = time.time()
@@ -28,21 +27,26 @@ The Unix time variable (timestamp) is based on the total seconds elapsed from th
 >>> after - before
 4.694000005722046
 ```
-
+We can also call ```datetime.datetime.now()``` which will return a datetime object, which can then be formatted. 
 ```
->>> import time, datetime
->>> datetime.datetime.now()
-datetime.datetime(2016, 8, 19, 11, 5, 32, 987424)
-datetime.datetime(2016, 8, 19, 11, 5, 32, 987424).strftime('%H:%M:%S %d/%m/%Y')
-'11:05:32 19/08/2016'
+>>> import datetime
+>>> date_today = datetime.datetime.now()
+>>> date_today
+datetime.datetime(2016, 8, 22, 8, 46, 4, 937283)
+>>> date_today.strftime('%d/%m/%Y')
+'22/08/2016'
+>>> date_today.strftime('%H:%M:%S')
+'08:46:04'
+>>> date_today.strftime('The date is %d/%m/%Y, the time is: %H:%M:%S')
+'The date is 22/08/2016, the time is: 08:46:04'
 ```
 
 ```
 >>> import datetime
 >>> time_now = datetime.datetime.now()
 >>> time_later = time_now + datetime.timedelta(days=10, hours=5, minutes=24, seconds=12)
->>> time_later
-datetime.datetime(2016, 8, 29, 20, 9, 43, 82408)
+>>> time_later.strftime('%H:%M:%S %d/%m/%Y')
+'14:16:43 01/09/2016'
 ```
 
 ## Hints and best practice
