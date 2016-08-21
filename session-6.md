@@ -40,7 +40,7 @@ datetime.datetime(2016, 8, 19, 11, 5, 32, 987424).strftime('%H:%M:%S %d/%m/%Y')
 ```
 >>> import datetime
 >>> time_now = datetime.datetime.now()
->>> time_later = time_now + datetime.timedelta(Days=10, Hours=5, Minutes=24, Seconds=12)
+>>> time_later = time_now + datetime.timedelta(days=10, hours=5, minutes=24, seconds=12)
 >>> time_later
 datetime.datetime(2016, 8, 29, 20, 9, 43, 82408)
 ```
@@ -105,3 +105,5 @@ Countdown started, T-minus 20
 ... 0
 ... Liftoff at 10:31:29 19/08/2016
 ```
+
+## Excel Problem
