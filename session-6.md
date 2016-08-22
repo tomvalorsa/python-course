@@ -82,6 +82,82 @@ def delay_function(seconds):
   print('Delay complete')
 ```
 
+## Pip-install
+
+Python can interract with .xlsx files in a similar way to .csv files seen in previous sessions.
+
+To do so, we need to install a library called ```openpyxl```, using a service called ```pip-install```. Unfortunately to do so requires administrator rights to the computer that you're using - if you're on your own laptop, great, otherwise you'll have to come back to this part.
+
+If you're on your own laptop, you will need to add environment variables to use pip-install.
+
+Go to Start > Control Panel > System > Advanced System Settings > Advanced > Environment Variables.
+You will need to add two new system variables - Click New... and add the following:
+
+Name: http_proxy  
+Value: proxy.ha.arup.com:80
+
+Name: https_proxy  
+Value: proxy.ha.arup.com:80
+
+Now if you open IDLE, you can enter the following command:
+```
+pip-install openpyxl
+```
+
+## openpyxl
+```openpyxl``` is a library that allows you to read and write excel files. This can come in handy when an  file becomes too large to handle effectively in Excel. There is a BASIX.xlsx file in the [resources](https://github.com/tomvalorsa/python-course/tree/master/resources) folder which you can download to your working directory.
+
+Start a new file in IDLE and save it in the same working directory as the excel file you just downloaded.
+
+Some basic commands: (NOTE you will need to have pip-installed openpxyl as outlined above)  
+
+To load the workbook and sheet (Save and run this file):
+```
+import openpyxl
+wb = openpyxl.load_workbook('BASIX.xlsx')
+sheet = wb.get_sheet_by_name('BASIX_Scores')
+```
+To find the sheet names in the workbook (in IDLE) - this will run for a while whilst the file is loaded into memory:
+```
+>>> wb.get_sheet_names()
+['BASIX_Scores']
+```
+Now we know its name we can select the first sheet:
+```
+>>> sheet=wb.get_sheet_by_name('BASIX_Scores')
+>>> sheet
+<Worksheet "BASIX_Scores">
+```
+You can select an individual cell in this sheet by referencing it using traditional excel syntax:
+```
+>>> sheet.cell('A1').value
+'Id'
+```
+Or by row-column notation (NOTE row=1 and column=1 not 0):
+```
+>>> sheet.cell(row=1, column=1).value
+'Id'
+```
+You can loop through cells and print their values to the screen:
+```
+>>> for i in range(1,10):
+	print(sheet.cell(row=i, column=1).value)
+Id
+32764
+52739
+175677
+182825
+199107
+238415
+14616
+14663
+>>> 
+```
+You can write a value or a formula into a cell:
+```
+sheet.cell(row=1, column=1).value = '=A2+A3/2'
+```
+
 ## Houston, we have a problem...
 
 The NASA employee who was supposed to read the countdown for today's space shuttle launch has woken up with a sore throat.
@@ -124,3 +200,12 @@ Countdown started, T-minus 20
 ```
 
 ## Excel Problem
+
+You have been asked to interrogate information found within a .xlsx file downloaded from the ABS website.
+The file contains information regarding the BASIX projects registered in 2015-16, and contains too many rows of data to manage with Excel.
+
+You have volunteered to use your python skills to create a new excel file with a more useable data set. The relevant information should be displayed in four columns:  
+
+Local Government Authority (LGA) | # of projects | avg. energy score | avg. water score
+
+A small example BASIX_Results.xlsx file can be found in the [resources](https://github.com/tomvalorsa/python-course/tree/master/resources) folder.
