@@ -99,9 +99,9 @@ Value: proxy.ha.arup.com:80
 Name: https_proxy  
 Value: proxy.ha.arup.com:80
 
-Now if you open IDLE, you can enter the following command:
+Now open cmd.exe from the start menu and enter the following command:
 ```
-pip-install openpyxl
+pip install openpyxl
 ```
 
 ## openpyxl
