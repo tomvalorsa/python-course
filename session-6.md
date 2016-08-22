@@ -215,8 +215,8 @@ Local Government Authority (LGA) | # of projects | avg. energy score | avg. wate
 
 Hint: you can find the maximum number of rows / columns using the following:
 ```
-sheet.max_row()
-sheet.max_column()
+sheet.max_row
+sheet.max_column
 ```
 
 A small example BASIX_Results.xlsx file can be found in the [resources](https://github.com/tomvalorsa/python-course/tree/master/resources) folder.
