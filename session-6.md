@@ -157,6 +157,10 @@ You can write a value or a formula into a cell:
 ```
 sheet.cell(row=1, column=1).value = '=A2+A3/2'
 ```
+You can create a workbook and save a workbook:
+```
+wb_2=openpyxl.Workbook()
+wb_2.save('Workboook2.xlsx')
 
 ## Houston, we have a problem...
 
@@ -207,5 +211,11 @@ The file contains information regarding the BASIX projects registered in 2015-16
 You have volunteered to use your python skills to create a new excel file with a more useable data set. The relevant information should be displayed in four columns:  
 
 Local Government Authority (LGA) | # of projects | avg. energy score | avg. water score
+
+Hint: you can find the maximum number of rows / columns using the following:
+```
+sheet.max_row()
+sheet.max_column()
+```
 
 A small example BASIX_Results.xlsx file can be found in the [resources](https://github.com/tomvalorsa/python-course/tree/master/resources) folder.
