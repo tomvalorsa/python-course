@@ -82,7 +82,7 @@ def delay_function(seconds):
   print('Delay complete')
 ```
 
-## Pip-install
+## Pip Install
 
 Python can interract with .xlsx files in a similar way to .csv files seen in previous sessions.
 
