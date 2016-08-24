@@ -23,7 +23,7 @@ In session 4 we learnt about the following:
 
 ## Evaluating lines
 
-Below is a snippet that will open and close a file, can you write some code that will eveluate the word count of line of text in example.txt
+Below is a snippet that will open and close a file, can you write some code that will evaluate the word count of line of text in example.txt
 print it to the screen?
 
 ```py
@@ -72,8 +72,8 @@ logs = ...your code here
 for log in logs:
 	
 	f = open(log, "r")
-	...your code here. get the last n recordings from the file. 
-	Think about how would you check if the recordings are likely to be valid?
+	# ...your code here. get the last n recordings from the file. 
+	# Think about how would you check if the recordings are likely to be valid?
 	
 	f.close()
 
