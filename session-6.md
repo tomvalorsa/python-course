@@ -14,13 +14,12 @@ Recall from session 4:
 
 The Unix time variable (timestamp) is based on the total seconds elapsed from the Unix Epoch (12 AM 1st January 1970 UTC).
 
-
 ```
 >>> import time
 >>> time.time()
 1471568701.1974244
 ```
-
+When we call ```time.time()``` we can assign it to a variable, eg ```time_now = time.time()``` and perform operations as usual - remember this operates in seconds.
 ```
 >>> import time
 >>> before = time.time()
@@ -28,21 +27,39 @@ The Unix time variable (timestamp) is based on the total seconds elapsed from th
 >>> after - before
 4.694000005722046
 ```
-
+We can also call ```datetime.datetime.now()``` which will return a datetime object, which can then be formatted. 
 ```
->>> import time, datetime
->>> datetime.datetime.now()
-datetime.datetime(2016, 8, 19, 11, 5, 32, 987424)
-datetime.datetime(2016, 8, 19, 11, 5, 32, 987424).strftime('%H:%M:%S %d/%m/%Y')
-'11:05:32 19/08/2016'
+>>> import datetime
+>>> date_today = datetime.datetime.now()
+>>> date_today
+datetime.datetime(2016, 8, 22, 8, 46, 4, 937283)
+>>> date_today.strftime('%d/%m/%Y')
+'22/08/2016'
+>>> date_today.strftime('%H:%M:%S')
+'08:46:04'
+>>> date_today.strftime('The date is %d/%m/%Y, the time is: %H:%M:%S')
+'The date is 22/08/2016, the time is: 08:46:04'
 ```
-
+We can advance or rewind a particular datetime by using ```datetime.timedelta()```.
 ```
 >>> import datetime
 >>> time_now = datetime.datetime.now()
->>> time_later = time_now + datetime.timedelta(Days=10, Hours=5, Minutes=24, Seconds=12)
->>> time_later
-datetime.datetime(2016, 8, 29, 20, 9, 43, 82408)
+>>> time_later = time_now + datetime.timedelta(days=10, hours=5, minutes=24, seconds=12)
+>>> time_later.strftime('%H:%M:%S %d/%m/%Y')
+'14:16:43 01/09/2016'
+```
+
+When we are running a program (for example a ```for``` loop), we can delay the program using the ```time.sleep()``` function:
+
+```
+>>> import time
+>>> def wait_ten_seconds():
+	    print('Waiting for 10 seconds')
+	    time.sleep(10)
+	    print('Finished!')
+>>> wait_ten_seconds()
+Waiting for 10 seconds
+Finished!
 ```
 
 ## Hints and best practice
@@ -63,6 +80,87 @@ def delay_function(seconds):
   for i in range(seconds):
     time.sleep(1)
   print('Delay complete')
+```
+
+## Pip Install
+
+Python can interract with .xlsx files in a similar way to .csv files seen in previous sessions.
+
+To do so, we need to install a library called ```openpyxl```, using a service called ```pip-install```. Unfortunately to do so requires administrator rights to the computer that you're using - if you're on your own laptop, great, otherwise you'll have to come back to this part.
+
+If you're on your own laptop, you will need to add environment variables to use pip-install.
+
+Go to Start > Control Panel > System > Advanced System Settings > Advanced > Environment Variables.
+You will need to add two new system variables - Click New... and add the following:
+
+Name: http_proxy  
+Value: proxy.ha.arup.com:80
+
+Name: https_proxy  
+Value: proxy.ha.arup.com:80
+
+Now open cmd.exe from the start menu and enter the following command:
+```
+pip install openpyxl
+```
+
+## openpyxl
+```openpyxl``` is a library that allows you to read and write excel files. This can come in handy when an  file becomes too large to handle effectively in Excel. There is a BASIX.xlsx file in the [resources](https://github.com/tomvalorsa/python-course/tree/master/resources) folder which you can download to your working directory.
+
+Start a new file in IDLE and save it in the same working directory as the excel file you just downloaded.
+
+Some basic commands: (NOTE you will need to have pip-installed openpxyl as outlined above)  
+
+To load the workbook and sheet (Save and run this file):
+```
+import openpyxl
+wb = openpyxl.load_workbook('BASIX.xlsx')
+sheet = wb.get_sheet_by_name('BASIX_Scores')
+```
+To find the sheet names in the workbook (in IDLE) - this will run for a while whilst the file is loaded into memory:
+```
+>>> wb.get_sheet_names()
+['BASIX_Scores']
+```
+Now we know its name we can select the first sheet:
+```
+>>> sheet=wb.get_sheet_by_name('BASIX_Scores')
+>>> sheet
+<Worksheet "BASIX_Scores">
+```
+You can select an individual cell in this sheet by referencing it using traditional excel syntax:
+```
+>>> sheet.cell('A1').value
+'Id'
+```
+Or by row-column notation (NOTE row=1 and column=1 not 0):
+```
+>>> sheet.cell(row=1, column=1).value
+'Id'
+```
+You can loop through cells and print their values to the screen:
+```
+>>> for i in range(1,10):
+	print(sheet.cell(row=i, column=1).value)
+Id
+32764
+52739
+175677
+182825
+199107
+238415
+14616
+14663
+>>> 
+```
+You can write a value or a formula into a cell:
+```
+sheet.cell(row=1, column=1).value = '=A2+A3/2'
+```
+You can create a workbook and save a workbook:
+```
+wb_2=openpyxl.Workbook()
+wb_2.save('Workboook2.xlsx')
 ```
 
 ## Houston, we have a problem...
@@ -105,3 +203,20 @@ Countdown started, T-minus 20
 ... 0
 ... Liftoff at 10:31:29 19/08/2016
 ```
+
+## BASIX BASICS
+
+You have been asked to interrogate information found within a .xlsx file downloaded from the ABS website.
+The file contains information regarding the BASIX projects registered in 2015-16, and contains too many rows of data to manage with Excel.
+
+You have volunteered to use your python skills to create a new excel file with a more useable data set. The relevant information should be displayed in four columns:  
+
+Local Government Authority (LGA) | # of projects | avg. energy score | avg. water score
+
+Hint: you can find the maximum number of rows / columns using the following:
+```
+sheet.max_row
+sheet.max_column
+```
+
+A small example BASIX_Results.xlsx file can be found in the [resources](https://github.com/tomvalorsa/python-course/tree/master/resources) folder.
