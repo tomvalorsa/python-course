@@ -37,3 +37,17 @@ e.g.
   T - 1
   Rating: Try harder!
 ```
+
+# Overtime
+
+Nobody got paid for any overtime this month, so you volunteer to figure out how much each person is owed in a bid to secure some early nominations for next year's Oves. Go you. Using data from `overtime.csv` calculate how much each employee is owed, assuming that everyone gets paid $50 per hour of overtime worked, and write this info to a separate csv:
+
+Example Output:
+
+|Employee|Money owed|
+|-----|------|
+|Tom|200|
+|Patrick|350|
+|Ian|400|
+|Other Tom|200|
+|Alex|50|
