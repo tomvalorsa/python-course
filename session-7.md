@@ -6,6 +6,7 @@ In session 7 we learnt about the following:
 2. Useful comments
 3. DRY principle/refactoring code
 
+
 # Scrabble
 
 Write a program that asks a user for a word and gives you back its [Scrabble](https://en.wikipedia.org/wiki/Scrabble) score. For now, pretend the user is your friend and they don't want to break your program - this means you can assume they have only entered one word and it's actually a real word.
@@ -51,3 +52,10 @@ Example Output:
 |Ian|400|
 |Other Tom|200|
 |Alex|50|
+
+
+# Useful Links/Further Reading
+
+- [Try Git](https://try.github.io/levels/1/challenges/1)
+- [Pep8 Python Style Guide](https://www.python.org/dev/peps/pep-0008/)
+- [Pep8 Code Checker](http://pep8online.com/)
