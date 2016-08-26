@@ -19,7 +19,7 @@ For the following questions assume `numbers = [0,1,2,3,4]`
 For the following questions assume `names = ['Alex', 'Mia', 'John', 'Laura', 'Joyce']`
 
 - What does `names.pop()` *return* and what does the list `names` become? It returns `'Joyce'` and `names` becomes `['Alex', 'Mia', 'John', 'Laura']`
-- What does `names.remove('mia')` *return* and what does the list `names` become? It returns 'None' and `names` becomes `['Alex', 'John', 'Laura', 'Joyce']`
+- What does `names.remove('mia')` *return* and what does the list `names` become? It returns `None` and `names` becomes `['Alex', 'John', 'Laura', 'Joyce']`
 
 For the following questions assume `person = {'name':'Alex', 'age':27, 'height':158}`
 
@@ -175,7 +175,7 @@ def pprint(dictionary, spacing_width = 10):
 		print(spacing + key + ': ' + str(value))
 	print('}')
 
-# python has some really great input methods for printing strings
+# python has some really great inbuilt methods for printing strings
 # below is a second implementation using string justification
 
 def pprint(dictionary, spacing_width = 10):
@@ -248,8 +248,9 @@ backpack = {
 	'weight': 0
 }
 
+weight_limit = 7
+
 for item in items:
-	weight_limit = 7
 	# check if the item fits in the backpack
 	if item['weight']+backpack['weight'] < weight_limit:
 		backpack['items'].append(item) # add item to backpack
