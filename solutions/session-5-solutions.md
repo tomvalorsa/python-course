@@ -84,6 +84,7 @@ def get_words_from_file(minimum_word_len = 3):
 	
 	words_file = open(words_full_file_path,'r')
 	lines = words_file.readlines()
+	words_file.close()
 	
 	all_words = lines[0].split()
 	
