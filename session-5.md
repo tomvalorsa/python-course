@@ -66,31 +66,33 @@ Again, plan carefully for this problem. Think about the steps to solve the probl
 
 A sample of the output of the analysis is shown below.
 ```
->>> print(session_attendance)
+>>> print(session_attendance())
 ------------------------------
-Attendance for each sessions:
+Attendee consistency
 ------------------------------
-Session 0: 41
-Session 1: 45
-Session 2: 38
-Session 3: 23
-Session 4: 49
-Session 5: 28
-Session 6: 37
-Session 7: 42
-Session 8: 39
+0 People attended 0 sessions
+0 People attended 1 sessions
+1 People attended 2 sessions
+1 People attended 3 sessions
+7 People attended 4 sessions
+11 People attended 5 sessions
+8 People attended 6 sessions
+5 People attended 7 sessions
+13 People attended 8 sessions
+4 People attended 9 sessions
 ------------------------------
-Attendance consistency
 ------------------------------
-8 Sessions: 5 people
-7 Sessions: 12 people
-6 Sessions: 35 people
-5 Sessions: 42 people
-4 Sessions: 38 people
-3 Sessions: 26 people
-2 Sessions: 16 people
-1 Sessions: 4 people
-0 Sessions: 0 people
+Attendance for each sessions
+------------------------------
+Session 0: 31
+Session 1: 38
+Session 2: 33
+Session 3: 32
+Session 4: 34
+Session 5: 33
+Session 6: 39
+Session 7: 37
+Session 8: 34
 ------------------------------
 ```
 ## Common Words

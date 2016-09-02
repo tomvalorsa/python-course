@@ -70,7 +70,7 @@ bakedfool112
 blackmandarin685
 ```
 
-__ANS__
+__ANS:__
 
 ```py
 import os
@@ -124,17 +124,6 @@ def generate_password():
 
 # now run:
 generate_password()
-
-
-# number of possible passwords
-number_of_words = len(get_words_from_file(minimum_word_len = 5))
-number_of_digits = len(string.digits)
-number_of_possible_passwords = (number_of_words**2) * (number_of_digits**3)
-print('number of possible passwords: {0}'.format(number_of_possible_passwords))
-
-# best case scenario if you can test 10000 a second:
-time_to_crack_password = number_of_possible_passwords / 10000 / 60 / 60 / 24 / 365
-print('time to crack password: {0} years'.format(round(time_to_crack_password,2)))
 ```
 
 ## Session Attendance
@@ -148,33 +137,105 @@ Again, plan carefully for this problem. Think about the steps to solve the probl
 
 A sample of the output of the analysis is shown below.
 ```
->>> print(session_attendance)
+>>> print(session_attendance())
 ------------------------------
-Attendance for each sessions:
+Attendee consistency
 ------------------------------
-Session 0: 41
-Session 1: 45
-Session 2: 38
-Session 3: 23
-Session 4: 49
-Session 5: 28
-Session 6: 37
-Session 7: 42
-Session 8: 39
+0 People attended 0 sessions
+0 People attended 1 sessions
+1 People attended 2 sessions
+1 People attended 3 sessions
+7 People attended 4 sessions
+11 People attended 5 sessions
+8 People attended 6 sessions
+5 People attended 7 sessions
+13 People attended 8 sessions
+4 People attended 9 sessions
 ------------------------------
-Attendance consistency
 ------------------------------
-8 Sessions: 5 people
-7 Sessions: 12 people
-6 Sessions: 35 people
-5 Sessions: 42 people
-4 Sessions: 38 people
-3 Sessions: 26 people
-2 Sessions: 16 people
-1 Sessions: 4 people
-0 Sessions: 0 people
+Attendance for each sessions
+------------------------------
+Session 0: 31
+Session 1: 38
+Session 2: 33
+Session 3: 32
+Session 4: 34
+Session 5: 33
+Session 6: 39
+Session 7: 37
+Session 8: 34
 ------------------------------
 ```
+
+__ANS:__
+```py
+import os
+
+def get_attendance_records(): 
+    attendance_file_name = 'attendance.csv'
+    attendance_file_path = "D:\\SoftwareProjects\\PythonCourse\\python-course\\resources\\Session-5" # replace with your working directory
+    attendance_full_file_path = os.path.join(attendance_file_path, attendance_file_name)
+
+    attendance_file = open(attendance_full_file_path,'r')
+    lines = attendance_file.readlines()
+    attendance_file.close()
+
+    header = lines[0]
+    attendance_records = lines[1:]
+
+    return attendance_records
+
+def convert_attendance_record_to_bools(sessions):
+    sessions_bool = []
+    for session in sessions:
+        if session == 'Yes':
+            sessions_bool.append(1)
+        else:
+            sessions_bool.append(0)
+    return sessions_bool
+
+def print_session_attendance(session_attendance):
+    print('------------------------------')
+    print('Attendance for each sessions')
+    print('------------------------------')
+    for session, attendance in session_attendance.items():
+        print("Session {0}: {1}".format(session, attendance))
+    print('------------------------------')
+
+def print_attendee_consistency(attendee_consistency):
+    print('------------------------------')
+    print('Attendee consistency')
+    print('------------------------------')
+    for sessions, attendance in attendee_consistency.items():
+        print("{0} People attended {1} sessions".format(attendance, sessions))
+    print('------------------------------')
+
+def session_attendance():
+	number_of_sessions = 9
+	session_attendance = {0:0, 1:0, 2:0, 3:0, 4:0, 5:0, 6:0, 7:0, 8:0}
+	attendee_consistency = {0:0, 1:0, 2:0, 3:0, 4:0, 5:0, 6:0, 7:0, 8:0, 9:0}
+
+	attendance_records = get_attendance_records()
+
+	for record in attendance_records:
+		record = record.strip('\n').split(',') # convert record from a string to a list
+		sessions = convert_attendance_record_to_bools(record[2:])
+		number_of_sessions = len(sessions)
+		number_of_sessions_attended = sum(sessions)
+		# add record to attendee_consitency dictionary
+		attendee_consistency[number_of_sessions_attended] += 1
+		# add record to session attendance dictionary
+		for i in range(number_of_sessions):
+			session_attendance[i] += sessions[i]
+
+
+	print_attendee_consistency(attendee_consistency)
+	print_session_attendance(session_attendance)
+
+# to run the script
+session_attendance()
+```
+
 ## Common Words
 
 Have you ever listened to a politician give a speech?
