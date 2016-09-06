@@ -81,13 +81,13 @@ def get_words_from_file(minimum_word_len = 3):
 	words_file_name = 'words.txt'
 	words_file_path = "D:\\SoftwareProjects\\PythonCourse\\python-course\\resources\\Session-5" # replace with your working directory
 	words_full_file_path = os.path.join(words_file_path, words_file_name)
-	
+
 	words_file = open(words_full_file_path,'r')
 	lines = words_file.readlines()
 	words_file.close()
-	
+
 	all_words = lines[0].split()
-	
+
 	filtered_words = []
 	for word in all_words:
 		if len(word) > minimum_word_len:
@@ -109,7 +109,7 @@ def select_random_words(list_of_words, number_of_words):
 		random_word = random.choice(list_of_words)
 		passwords += random_word.title() # make first letter uppercase
 	return passwords
-	
+
 
 def generate_password():
 	minimum_word_len = 5
@@ -119,7 +119,7 @@ def generate_password():
 	list_of_words = get_words_from_file(minimum_word_len)
 
 	password = select_random_words(list_of_words, number_of_words) + generate_random_numbers(number_of_digits)
-	
+
 	return password
 
 # now run:
@@ -171,7 +171,7 @@ __ANS:__
 ```py
 import os
 
-def get_attendance_records(): 
+def get_attendance_records():
     attendance_file_name = 'attendance.csv'
     attendance_file_path = "D:\\SoftwareProjects\\PythonCourse\\python-course\\resources\\Session-5" # replace with your working directory
     attendance_full_file_path = os.path.join(attendance_file_path, attendance_file_name)
@@ -268,7 +268,7 @@ This is not in any particular order. How would you sort these values by their fr
 A sample output is shown below:
 
 ```
-Word: 'the', frequency: 198 
+Word: 'the', frequency: 198
 Word: 'and', frequency: 164
 Word: 'will', frequency: 80
 Word: 'for', frequency: 69
@@ -280,4 +280,96 @@ Word: 'that', frequency: 37
 Word: 'their', frequency: 36
 Word: 'jobs', frequency: 36
 Word: 'new', frequency: 30
+```
+__ANS__
+
+Loading the words into a dictionary with their respective frequencies:
+```py
+text_file = open('2016_budget_speech.txt', 'r')
+lines = text_file.readlines()
+text_file.close()
+
+stripped_words=[]
+word_freq={}
+
+# here we split all lines by spaces,
+# then strip words of all punctuation,
+# and append to stripped_words
+for line in lines:
+    for word in line.lower().split(' '):
+        stripped_words.append(word.strip(',\n.;:"- /'))
+
+# add each word to the dictionary
+# if the word exists, add 1 to the counter
+# if not, set the counter = 1
+for word in stripped_words:
+    # test if in dictionary
+    if word in word_freq:
+        word_freq[word] += 1
+    else:
+        word_freq[word] = 1
+```
+
+Now all the words from the speech have been loaded into `word_freq`. Go ahead - type `print(word_freq)` and see what happens.
+
+If we want to see which words occur more than 10 times, we can iterate through the dictionary, and only print a word (key) if its frequency (value) is > 10:
+
+```py
+for word, frequency in word_freq.items():
+	if frequency > 10:
+        	print(word)
+```
+But this doesn't give us anything particularly useful. Instead let's write a function that accepts two arguments (dictionary, number of items to return):
+
+```py
+
+# previous code here
+
+# function to sort a list of (key, value) tuples based off value
+def sortList(dictionary, top_x_values):
+
+    first_iteration = True
+		unsorted_list = dictionary.items()
+		sorted_list = []
+
+		# if first iteration, put the item in sorted_list (only if > 2 characters!)
+		for item in unsorted_list:
+			if len(item[0]) > 2:
+				if first_iteration:
+					sorted_list.append(item)
+					first_iteration = False
+				else:
+					for i in range(len(sorted_list)):
+						if item[1] > sorted_list[i][1]:
+							sorted_list.insert(i, item)
+             	break
+             	# test if smaller than last item
+           	if item[1] < sorted_list[-1][1]:
+             	sorted_list.append(item)
+		for item in sorted_list[:top_x_values]:
+     	print("Item: '{0}', frequency: {1}".format(item[0], item[1]))
+```
+Now we can just run the function with our list!
+```
+>>> sortList(word_freq, 20)
+Item: 'the', frequency: 198
+Item: 'and', frequency: 164
+Item: 'will', frequency: 81
+Item: 'for', frequency: 69
+Item: 'tax', frequency: 69
+Item: 'our', frequency: 53
+Item: 'this', frequency: 47
+Item: 'are', frequency: 38
+Item: 'that', frequency: 37
+Item: 'jobs', frequency: 37
+Item: 'their', frequency: 36
+Item: 'new', frequency: 30
+Item: 'plan', frequency: 29
+Item: 'more', frequency: 29
+Item: 'per', frequency: 28
+Item: 'businesses', frequency: 27
+Item: 'they', frequency: 26
+Item: 'with', frequency: 26
+Item: 'from', frequency: 25
+Item: 'than', frequency: 25
 ```
