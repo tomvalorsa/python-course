@@ -328,26 +328,26 @@ But this doesn't give us anything particularly useful. Instead let's write a fun
 # function to sort a list of (key, value) tuples based off value
 def sortList(dictionary, top_x_values):
 
-    first_iteration = True
-		unsorted_list = dictionary.items()
-		sorted_list = []
+	first_iteration = True
+	unsorted_list = dictionary.items()
+	sorted_list = []
 
-		# if first iteration, put the item in sorted_list (only if > 2 characters!)
-		for item in unsorted_list:
-			if len(item[0]) > 2:
-				if first_iteration:
+	# if first iteration, put the item in sorted_list (only if > 2 characters!)
+	for item in unsorted_list:
+		if len(item[0]) > 2:
+			if first_iteration:
+				sorted_list.append(item)
+				first_iteration = False
+			else:
+				for i in range(len(sorted_list)):
+					if item[1] > sorted_list[i][1]:
+						sorted_list.insert(i, item)
+						break
+				# test if smaller than last item
+				if item[1] < sorted_list[-1][1]:
 					sorted_list.append(item)
-					first_iteration = False
-				else:
-					for i in range(len(sorted_list)):
-						if item[1] > sorted_list[i][1]:
-							sorted_list.insert(i, item)
-             	break
-             	# test if smaller than last item
-           	if item[1] < sorted_list[-1][1]:
-             	sorted_list.append(item)
-		for item in sorted_list[:top_x_values]:
-     	print("Item: '{0}', frequency: {1}".format(item[0], item[1]))
+	for item in sorted_list[:top_x_values]:
+		print("Item: '{0}', frequency: {1}".format(item[0], item[1]))
 ```
 Now we can just run the function with our list!
 ```
