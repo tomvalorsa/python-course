@@ -131,7 +131,7 @@ def write_personal_email(template, destination, first_name, last_name, age):
 
 
     # open a new file to personalised message
-    f_out = open(destination + first_name + last_name + '.html', 'w')
+    f_out = open('{0}{1}{2}{3}.html'.format(destination, first_name, last_name), 'w')
 
     # loop through personal message and write to personal file
     for line in personalised_message:
@@ -152,7 +152,7 @@ write_personal_email('template.html','', 'Joe', 'Blogs', 25) # run like this to 
 
 # for line in lines:
 
-    # TO DO: use line.split function to process data from Employees.csv and then call
+    # TO DO: use line.split() function to process data from Employees.csv and then call
     # write_personal_email(destination, firstname, lastname, age)
 
 ```
